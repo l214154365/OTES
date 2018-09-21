@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="otes.dao.premissiondao">
+	<select id="findMenuListByType" parameterType="String" resultType="otes.entity.premission">
+		select * FROM permission WHERE Type="menu" AND id IN(select premissionid FROM role_premission WHERE )
+	</select>
+</mapper>
